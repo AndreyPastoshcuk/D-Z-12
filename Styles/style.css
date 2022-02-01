@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  text-align: center;
+  align-self: center;
+  align-items: center;
+}
+
+.text {
+  color: tomato;
+  text-shadow: 5px 5px transparent;
+  transition: text-shadow 1s linear 0.25s;
+}
+
+.text:hover {
+  text-shadow: 5px 5px lightcoral;
+}
+
+.box-one {
+  width: 300px;
+  height: 100px;
+  background-color: lightblue;
+  border: 5px solid transparent;
+  transition: all 1s linear 0.25s;
+}
+
+.box-one:hover {
+  border: 5px solid lightblue;
+  border-radius: 50%/20px 0;
+  background-color: lightcoral;
+}
+
+.box-two {
+  width: 300px;
+  height: 100px;
+  background-color: lightpink;
+  border: 5px inset transparent;
+  transition: all 1s linear 0.25s;
+}
+
+.box-two:hover {
+  border: 5px inset pink;
+  background-color: tomato;
+}
+
+.box-three {
+  width: 300px;
+  height: 100px;
+  background-color: lightseagreen;
+  border: 5px solid seagreen;
+  outline: 5px solid transparent;
+  transition: outline 1s linear 0.25s;
+}
+
+.box-three:hover {
+  outline: 5px solid green;
+  outline-offset: 5px;
+}
+
+.box-four {
+  width: 300px;
+  height: 100px;
+  background-color: indianred;
+  transition: all 1s linear 0.25s;
+}
+
+.box-four:hover {
+  width: 450px;
+  height: 80px;
+  box-shadow: 0 15px 15px -10px rgba(0, 0, 0, 0.5);
+}
+
+.container-turn {
+  position: relative;
+  display: flex;
+  width: 200px;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container-turn:hover .box-turn-one {
+  transform: rotate(90deg);
+}
+.container-turn:hover .box-turn-two {
+  transform: rotate(-90deg);
+}
+.container-turn:hover .box-turn-three {
+  transform: rotate(-90deg);
+}
+.container-turn:hover .box-turn-four {
+  transform: rotate(90deg);
+}
+
+.title {
+  position: absolute;
+  z-index: -1;
+}
+
+.box-turn-one {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition: transform 1.5s ease-in 0.25s;
+  transform-origin: left top;
+}
+
+.box-turn-two {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  transition: transform 1.5s ease-in 0.25s;
+  transform-origin: right top;
+}
+
+.box-turn-three {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  transition: transform 1.5s ease-in 0.25s;
+  transform-origin: left bottom;
+}
+
+.box-turn-four {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  transition: transform 1.5s ease-in 0.25s;
+  transform-origin: right bottom;
+}
